@@ -1,0 +1,30 @@
+services:
+  backend:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_USER=js
+      - DB_PASSWORD=evanevo1
+      - DB_NAME=js_practice
+      - JWT_SECRET=your-secret-key-change-this-later
+      - PORT=3000
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+      - MYSQL_DATABASE=js_practice
+      - MYSQL_USER=js
+      - MYSQL_PASSWORD=evanevo1
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
