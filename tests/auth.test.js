@@ -167,5 +167,6 @@ describe('POST/PUT/DELETE  /users', () => {
 
 
 afterAll(async () => {
+    await pool.query("DELETE FROM users WHERE `name` LIKE 'evan1200_%' OR `name` = 'new_post' OR `name` = 'updated_crud_user';");
     await pool.end();
 });
