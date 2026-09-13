@@ -130,6 +130,11 @@ Protected routes require an `Authorization: Bearer <token>` header.
 - Writing automated tests with realistic setup/teardown (including database cleanup)
 - Containerizing a multi-service application with Docker Compose
 
+## 🔗 Live Demo
+- **Frontend**: https://evanbittar.github.io/backend-practice-frontend/
+- **API**: https://backend-practice-production-22ad.up.railway.app
+
 ## Author
 
 **Evan** — [GitHub](https://github.com/EvanBittar)
+
